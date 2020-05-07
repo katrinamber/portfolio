@@ -16,17 +16,30 @@ body {
 }
 
 body {
-  background-color: salmon;
+  background-image: url("assets/flower.jpg");
   color: white;
   text-align: center;
   font-size: 2em;
 }
 
-.my-fun-class {
+.info {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  color:lightpink;
+  text-shadow: 2px 2px white;
   width: 50%;
   border: 2px solid limegreen;
   display: block;
   margin: auto;
+  margin-top: 20%;
+}
+
+.info-text{
+
+  font-size: 15px;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 @media only screen and (max-width: 600px) {
