@@ -9,26 +9,106 @@
 
 <body>
 
-    <!-- <img src="assets/knot1.png"></img> -->
-    <div class="info">
-      <h1>Katrina Lee</h1>
-      <p class="info-text"> I am currently a freshman at NYU studying Integrated Digital Media. Currently, I have interests in graphic design and film making. To view my projects, <a href="projects.html"> click here.</a> To see some of my other interests such as photography and calligraphy, scroll down.
+  <!-- <img src="assets/knot1.png"></img> -->
+  <div class="info">
+    <h1>Katrina Lee</h1>
+    <p class="info-text"> I am currently a freshman at NYU studying Integrated Digital Media. Currently, I have interests in graphic design and film making. To view my projects, <a href="projects.html"> click here.</a> To see some of my other
+      interests such as photography and calligraphy, scroll down.
+    </p>
+  </div>
 
-  </p>
-    </div>
+  <br>
+  <br>
+  <br>
 
-
+  <section id="Photography">
     <div class="photography">
       <h2>Photography</h2>
-    </div>
+<!-- found this off of https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp -->
+      <!-- Container for the image gallery -->
+      <div class="container">
 
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="assets/photo/fall.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="assets/photo/lights.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="assets/photo/sky.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="assets/photo/snow.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="assets/photo/tandon.jpg" style="width:50%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="assets/photo/water.jpg" style="width:50%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="assets/photo/fall.jpg" style="width:100%;height:300px" onclick="currentSlide(1)" alt="The Woods">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="assets/photo/lights.jpg" style="width:100%;height:300px" onclick="currentSlide(2)" alt="Night Lights">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="assets/photo/sky.jpg" style="width:100%;height:300px" onclick="currentSlide(3)" alt="Looking Down on Skyscraper">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="assets/photo/snow.jpg" style="width:100%;height:300px" onclick="currentSlide(4)" alt="Snowy Ground">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="assets/photo/tandon.jpg" style="width:100%;height:300px" onclick="currentSlide(5)" alt="Mysterious Skies">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="assets/photo/water.jpg" style="width:100%;height:300px" onclick="currentSlide(6)" alt="Fairy Land">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="Calligraphy">
     <div class="calligraphy">
       <h2>Calligraphy</h2>
     </div>
+  </section>
 
-
-
-    <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        $(".main").css("opacity", 1 - $(window).scrollTop() / 1250)
+      })
+    })
+  </script>
 </body>
 
 </html>
